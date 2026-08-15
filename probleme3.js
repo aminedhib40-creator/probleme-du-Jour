@@ -34,10 +34,10 @@ function nbrbonjour(n){
 let result=""
 let i=1
 while (i<=n){
-    result+="bonjour"
+    console.log("bonjour")
     i++
 }
-return result
+
 
 }
 console.log(nbrbonjour(3))
