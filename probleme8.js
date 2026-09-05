@@ -1,39 +1,47 @@
 
-// J’ai un seau de paresseux. Chaque paresseux est spécial et possède un nom long.
-// Ci-dessous se trouve un tableau appelé seauDeParesseux, contenant toutes les informations sur mes paresseux.
-let seauDeParesseux = [
-  { nom: { prenom: "Poilu", deuxiemePrenom: "Dangereux", nomDeFamille: "Assassin" }, age: 2 },
-  { nom: { prenom: "Lent", nomDeFamille: "Citrouille" }, age: 3 },
-  { nom: { prenom: "Balle", deuxiemePrenom: "Blindé", nomDeFamille: "Paresseux" }, age: 4 },
-  { nom: { prenom: "Bisou", deuxiemePrenom: "Bisou", nomDeFamille: "Chignon" }, age: 5 },
-  { nom: { prenom: "Jungle", nomDeFamille: "Duveteux" }, age: 2 },
-];
+// // J’ai un seau de paresseux. Chaque paresseux est spécial et possède un nom long.
+// // Ci-dessous se trouve un tableau appelé seauDeParesseux, contenant toutes les informations sur mes paresseux.
+// let seauDeParesseux = [
+//   { nom: { prenom: "Poilu", deuxiemePrenom: "Dangereux", nomDeFamille: "Assassin" }, age: 2 },
+//   { nom: { prenom: "Lent", nomDeFamille: "Citrouille" }, age: 3 },
+//   { nom: { prenom: "Balle", deuxiemePrenom: "Blindé", nomDeFamille: "Paresseux" }, age: 4 },
+//   { nom: { prenom: "Bisou", deuxiemePrenom: "Bisou", nomDeFamille: "Chignon" }, age: 5 },
+//   { nom: { prenom: "Jungle", nomDeFamille: "Duveteux" }, age: 2 },
+// ];
 
-// a- écrire une fonction fullName qui prend en entrée un index et un tableau
-// et retourne le nom complet sous forme de chaîne de caractères
-// nomComplet(seauDeParesseux,0) //==> "Poilu Dangereux Assassin"
-function nomComplet(tableau, position) {
-  let personne = tableau[position]
-  let result = personne.nom.prenom
-  if (personne.nom.deuxiemePrenom){
-    result = result + " " + personne.nom.deuxiemePrenom
-  }
+// // a- écrire une fonction fullName qui prend en entrée un index et un tableau
+// // et retourne le nom complet sous forme de chaîne de caractères
+// // nomComplet(seauDeParesseux,0) //==> "Poilu Dangereux Assassin"
+// function nomComplet(tableau, position) {
+//   let personne = tableau[position]
+//   let result = personne.nom.prenom
+//   if (personne.nom.deuxiemePrenom){
+//     result = result + " " + personne.nom.deuxiemePrenom
+//   }
   
-    result += " " + personne.nom.nomDeFamille
+//     result += " " + personne.nom.nomDeFamille
   
-  return result
-}
-console.log(nomComplet(seauDeParesseux, 0))
+//   return result
+// }
+// console.log(nomComplet(seauDeParesseux, 0))
 
-// b- écrire une fonction qui prend un tableau d’objets (comme seauDeParesseux)
-// et retourne le paresseux (doit retourner un objet)
-// qui possède le nom le plus long (prénom, deuxième prénom & nom).
-// Remarque : il peut être utile d’utiliser la fonction nomComplet,
-// plusLongNom(seauDeParesseux);
-// => { nom: { prenom: "Poilu", deuxiemePrenom: "Dangereux", nomDeFamille: "Assassin" }, age: 2 }
-function plusLongNom(seauDeParesseux) {
-  
-}
+// // b- écrire une fonction qui prend un tableau d’objets (comme seauDeParesseux)
+// // et retourne le paresseux (doit retourner un objet)
+// // qui possède le nom le plus long (prénom, deuxième prénom & nom).
+// // Remarque : il peut être utile d’utiliser la fonction nomComplet,
+// // plusLongNom(seauDeParesseux);
+// // => { nom: { prenom: "Poilu", deuxiemePrenom: "Dangereux", nomDeFamille: "Assassin" }, age: 2 }
+// function plusLongNom(seauDeParesseux) {
+//   let plusLang=seauDeParesseux[0]
+//   for (let i = 1 ; i<seauDeParesseux.length ; i++){
+//     if (nomComplet(seauDeParesseux[i]).length>nomComplet(plusLang).length){
+//       plusLang=seauDeParesseux[i]
+//     }
+    
+//   }
+//   return plusLang
+// }
+// console.log(plusLongNom(seauDeParesseux))
 
 // - créer un modèle de données pour représenter vos camarades de classe
 // - réfléchir aux différents attributs de vos camarades : qu’ont-ils tous en commun ?
@@ -48,3 +56,50 @@ function plusLongNom(seauDeParesseux) {
 // - écrire une fonction recherche qui, étant donné une requête (query)
 //   et un tableau de camarades ,
 //   cherche dans le tableau des camarades un camarade « correspondant ».
+let camarades = [
+    {
+        prenom: "Ahmed",
+        nom: "Ben Ali",
+        age: 21,
+        ville: "Tunis",
+        specialite: "Informatique"
+    },
+    {
+        prenom: "Sami",
+        nom: "Trabelsi",
+        age: 20,
+        ville: "Bardo",
+        specialite: "Informatique"
+    },
+    {
+        prenom: "Amine",
+        nom: "Dhib",
+        age: 21,
+        ville: "Tunis",
+        specialite: "Informatique"
+    }
+];
+function creerCamarade(prenom,nom,age,ville,specialite){
+  return {
+    prenom : prenom ,
+    nom : nom ,
+    age : age ,
+    ville : ville ,
+    specialite : specialite ,
+
+  };
+}
+let tab = []
+function afficherAmi(camarades){
+  return camarades.prenom+" "+camarades.nom+" "+camarades.age+" "+camarades.ville+" "+camarades.specialite
+}
+
+function ajouterAmi(camarade){
+  tab.push(camarade)
+
+}
+let camarade=creerCamarade( "Amine","Dhib", 21, "Tunis", "Informatique")
+console.log(camarade)
+console.log(afficherAmi(camarade))
+console.log(ajouterAmi(creerCamarade("ahmed","dhib")))
+console.log(tab)
