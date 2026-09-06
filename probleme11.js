@@ -86,21 +86,3 @@
 // Le minuteur doit s'arrêter automatiquement lorsque secondes atteint 0.
 
 
-// D
-
-
-// Implémentez une méthode appelée reinitialiser.
-//
-// Cette méthode remet le minuteur à sa valeur initiale.
-//
-// Si le minuteur est en cours :
-// - arrêtez l'intervalle.
-// - changez estEnCours à false.
-//
-// Puis :
-// - remettez secondes à sa valeurInitiale.
-//
-// Affichez :
-// "Le minuteur a été réinitialisé"
-
-
