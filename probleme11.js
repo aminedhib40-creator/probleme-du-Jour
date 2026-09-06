@@ -64,25 +64,3 @@
 // => "Terminé !"
 
 
-
-
-// C
-
-// Utilisez setInterval() pour faire diminuer automatiquement
-// le nombre de secondes toutes les secondes.
-//
-// Le minuteur doit afficher le temps restant à chaque seconde.
-//
-// Exemple attendu :
-//
-// Temps restant : 5 secondes
-// Temps restant : 4 secondes
-// Temps restant : 3 secondes
-// Temps restant : 2 secondes
-// Temps restant : 1 seconde
-// Temps restant : 0 secondes
-// Terminé !
-//
-// Le minuteur doit s'arrêter automatiquement lorsque secondes atteint 0.
-
-
