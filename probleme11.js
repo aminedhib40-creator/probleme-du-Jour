@@ -16,18 +16,29 @@
 class Minuteur{
     constructor(secondes){
         this.secondes=secondes
-        this.valeurInitial=0
+        this.valeurInitial=secondes
         this.estEnCours=false
         this.interval=null
     }
     demarrer(){
+        
         if(this.estEnCours === true){
             return "Le minuteur est déjà en cours"
         }
-        if(this.estEnCours === false){
-            this.estEnCours = true
-            return "Le minuteur démarre !"
+        if (this.secondes===0){
+            return "Le minuteur est déjà terminé"
         }
+        else{
+            this.estEnCours = true
+            this.interval=setInterval( () => {
+            this.diminuerTemps()
+
+        },1000)
+            return "Le minuteur démarre !"
+          
+        }
+        
+       
     };
     arreter(){
         if( this.estEnCours === false ){
@@ -36,33 +47,37 @@ class Minuteur{
         clearInterval(this.interval)
         this.estEnCours=false
         return  "Le minuteur est arrêté"
+        this.afficherTemps()
 
     };
     afficherTemps(){
                                                                     
-        return "Temps restant : "+this.secondes+"secondes"
+        console.log("Temps restant : "+this.secondes+"secondes") 
     };
     diminuerTemps(){
-        if (this.secondes !== 0){
         this.secondes--
-        return "le temps est diminuer"
-        }
-        if(this.secondes === 0){
-            return "Temps restant : " this.secondes +"secondes"
-            return "Terminé !"
+        
+        if(this.secondes <= 0){
+            console.log("Temps restant : 0 secondes") 
+            console.log("Terminé !") 
             clearInterval(this.interval)
             this.estEnCours=false
             
         }
-       
+        else{
+            this.afficherTemps()
 
+        }
+       
     }
 
 }                                                                           
-let min=new Minuteur(3000)
+let min=new Minuteur(10)
 console.log(min.demarrer())
-console.log(min.demarrer())
-console.log(min.afficherTemps())
+console.log(min)
+
+
+
 
 // B
 
