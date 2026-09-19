@@ -5,20 +5,21 @@
  * Exemple d'utilisation :
  * moveZeros([0, 4, 0, 7, 2, 0, 5])  // [4, 7, 2, 5, 0, 0, 0]
  */
-var moveZeros = function(arr) {
-  let tab=[]
-  let nbrzero=0
-  for (let i =0 ; i<arr.length;i++){
-    if (arr[i]===0){
+var moveZeros = function (arr) {
+  let tab = []
+  let nbrzero = 0
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 0) {
       nbrzero++
     }
-    else{
+    else {
       tab.push(arr[i])
-    }}
-   for (let i =0 ; i<nbrzero;i++){
+    }
+  }
+  for (let i = 0; i < nbrzero; i++) {
     tab.push(0)
-   } 
-   return tab
+  }
+  return tab
 };
 console.log(moveZeros([0, 4, 0, 7, 2, 0, 5]))
 /**
@@ -27,6 +28,6 @@ console.log(moveZeros([0, 4, 0, 7, 2, 0, 5]))
  * Exemple d'utilisation :
  * missingNumber([1, 2, 4, 5, 6])  // 3
  */
-var missingNumber = function(arr) {
+var missingNumber = function (arr) {
   // Votre code ici.
 };
