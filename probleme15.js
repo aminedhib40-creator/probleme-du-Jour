@@ -7,7 +7,7 @@
 // et retourne un tableau contenant toutes ces chaînes,
 // mais converties en majuscules.
 // Résolvez cela en utilisant l'une des fonctions utilitaires
-// les plus appropriées (each, map, filter, reduce).
+// les plus appropriées  (map, filter, reduce).
 
 // var tableauChaines = ['bonjour', 'monde', 'tourne', 'pois'];
 // mettreEnMajuscules(tableauChaines); 
@@ -25,7 +25,7 @@ function mettreEnMajuscules(tableauChaines) {
 // et retourne un tableau contenant uniquement les pays
 // dont la population est supérieure à 500 millions.
 // Résolvez cela en utilisant l'une des fonctions utilitaires
-// les plus appropriées (each, map, filter, reduce).
+// les plus appropriées   (map, filter, reduce).
 
 // Voici les données avec lesquelles vous allez travailler :
 
@@ -66,7 +66,7 @@ function paysLesPlusPeuples(tableauPays) {
 // de nombres en entrée et retourne un tableau
 // avec tous ces nombres divisés par deux.
 // Résolvez cela en utilisant l'une des fonctions utilitaires
-// les plus appropriées (each, map, filter, reduce).
+// les plus appropriées   (map, filter, reduce).
 
 // var tableauNombres = [2, 6, 20, 8, 14];
 // diviserParDeux(tableauNombres); ==> [1, 3, 10, 4, 7]
@@ -82,8 +82,7 @@ function diviserParDeux(tableauNombres) {
 // Écrire une fonction appelée valeurs qui accepte un objet en paramètre
 // et retourne un tableau contenant les valeurs de cet objet.
 // Résolvez cela en utilisant l'une des fonctions utilitaires
-// les plus appropriées (each, map, filter, reduce).
-
+// les plus appropriées   (map, filter, reduce).
 // valeurs({
 //     premier: 5,
 //     deuxieme: 'quelque chose',
@@ -102,8 +101,7 @@ function valeurs(objet) {
 // Écrire une fonction appelée chaineLaPlusCourte qui accepte
 // un tableau de chaînes et retourne la chaîne la plus courte.
 // Résolvez cela en utilisant l'une des fonctions utilitaires
-// les plus appropriées (each, map, filter, reduce).
-
+// les plus appropriées   (map, filter, reduce).
 // chaineLaPlusCourte(["salut", "a", "longue", "oui"]);
 // ==> "a"
 
